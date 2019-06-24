@@ -4,7 +4,7 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <persistence-unit name="templatePU" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="templatePU">
 
         <description>Hibernate test case template Persistence Unit</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
@@ -12,37 +12,14 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
 
         <properties>
-            <property name="hibernate.archive.autodetection" value="class, hbm"/>
-
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.jdbc.batch_size" value="100"/>
             <property name="hibernate.jdbc.lob.non_contextual_creation" value="true"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/demo"/>
             <property name="javax.persistence.jdbc.user" value="postgres"/>
             <property name="javax.persistence.jdbc.password" value="123"/>
-
-            <property name="hibernate.connection.pool_size" value="5"/>
-
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-<!--            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
-
-            <property name="hibernate.max_fetch_depth" value="5"/>
-
-            <property name="hibernate.cache.region_prefix" value="hibernate.test"/>
-            <property name="hibernate.cache.region.factory_class"
-                      value="org.hibernate.testing.cache.CachingRegionFactory"/>
-
-            <!--NOTE: hibernate.jdbc.batch_versioned_data should be set to false when testing with Oracle-->
-            <property name="hibernate.jdbc.batch_versioned_data" value="true"/>
-
-            <property name="javax.persistence.validation.mode" value="NONE"/>
-            <property name="hibernate.service.allow_crawling" value="false"/>
-            <property name="hibernate.session.events.log" value="true"/>
-
-            <!--            IMPORTANT setting to reproduce bug-->
-            <property name="hibernate.jdbc.batch_size" value="100"/>
         </properties>
 
     </persistence-unit>
