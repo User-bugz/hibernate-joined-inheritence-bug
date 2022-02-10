@@ -9,7 +9,7 @@
 
 	<properties>
 		<version.junit>4.12</version.junit>
-		<version.org.hibernate>5.4.0.Final</version.org.hibernate>
+		<version.org.hibernate>5.4.24.Final</version.org.hibernate>
 <!--		<version.org.hibernate>5.3.10.Final</version.org.hibernate>-->
 		<version.org.slf4j>1.7.25</version.org.slf4j>
 		<version.org.postgresql>42.2.5</version.org.postgresql>
