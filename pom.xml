@@ -12,7 +12,7 @@
 		<version.org.hibernate>5.4.0.Final</version.org.hibernate>
 <!--		<version.org.hibernate>5.3.10.Final</version.org.hibernate>-->
 		<version.org.slf4j>1.7.25</version.org.slf4j>
-		<version.org.postgresql>42.2.5</version.org.postgresql>
+		<version.org.postgresql>42.3.3</version.org.postgresql>
 	</properties>
 
 	<dependencies>
